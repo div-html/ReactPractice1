@@ -1,66 +1,48 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import React from 'react'
+import { ExternalLink, Github, Sun } from 'lucide-react';
 const Navbar = () => {
     return (
-        <nav className="flex items-center justify-between px-6 py-3 bg-stone-100 shadow-md">
+        <>
+            <div className="nav flex justify-between px-4 py-6 font-geist bg-zinc-950 text-white backdrop-blur-lg sticky top-0 z-50">
 
-            <div className="flex items-center gap-3">
-                <img
-                    src="https://i.pinimg.com/1200x/81/e4/a8/81e4a8120fe4993961e40997e4ca60cf.jpg"
-                    alt="Logo"
-                    className="h-14 w-14 rounded-full object-cover"
-                />
-                <span className="hidden sm:block font-semibold text-stone-800">
-                    Elysian
-                </span>
-            </div>
+                <div className="left flex gap-4">
+                    <p className='font-bold text-white'>Divyam's Portfolio</p>
+                    <a href="https://www.linkedin.com/in/divyam-pariyar-99303a371/" className='text-gray-300' target="_blank" rel="noreferrer">
+                        Linkedin <ExternalLink size={13} className="ml-2 inline" />
+                    </a>
+                    <a href="" className='text-gray-300' target="_blank" rel="noreferrer">
+                        Resume<ExternalLink size={13} className="ml-2 inline" />
+                    </a>
 
-            <div className="flex-1 max-w-md mx-6 hidden md:block">
-                <div className="flex items-center rounded-full bg-stone-200 px-4 py-2 focus-within:ring-2 focus-within:ring-amber-600 transition">
+                </div>
+                <div className="right flex gap-4">
                     <input
                         type="text"
-                        placeholder="Search jewellery..."
-                        className="w-full bg-transparent outline-none text-stone-800 placeholder-stone-500"
+                        name="search"
+                        id="search"
+                        autoComplete='off'
+                        placeholder="Search sections..."
+                        className="w-full bg-zinc-900/50 border border-zinc-800 text-zinc-100 placeholder:text-zinc-500 px-4 py-1.5 rounded-md transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-zinc-700 focus:border-zinc-600"
                     />
+                    <a
+                        href="https://github.com/div-html"
+                        className="p-2 rounded-md hover:bg-zinc-800 transition-colors"
+                        aria-label="GitHub Profile"
+                    >
+                        <Github size={20} strokeWidth={1.5} />
+                    </a>
+
+                    <button
+                        className="p-2 rounded-md hover:bg-zinc-800 transition-colors"
+                        aria-label="Toggle Theme"
+                    >
+                        <Sun size={20} strokeWidth={1.5} />
+                    </button>
                 </div>
             </div>
 
-            <div className="flex items-center gap-6 text-stone-700">
+        </>
+    )
+}
 
-                <Link
-                    smooth
-                    to="#contact"
-                    className="transition-colors duration-300 hover:text-amber-700"
-                >
-                    Contact
-                </Link>
-
-                <Link
-                    smooth
-                    to="#about"
-                    className="transition-colors duration-300 hover:text-amber-700"
-                >
-                    About
-                </Link>
-
-                <Link
-                    smooth
-                    to="#cart"
-                    className="transition-colors duration-300 hover:text-amber-700"
-                >
-                    Cart
-                </Link>
-
-                <Link
-                    smooth
-                    to="#add-to-cart"
-                    className="rounded-full bg-amber-700 px-4 py-2 text-white transition-all duration-300 hover:bg-amber-800 active:scale-95"
-                >
-                    Add to Cart
-                </Link>
-            </div>
-        </nav>
-    );
-};
-
-export default Navbar;
+export default Navbar
