@@ -3,7 +3,7 @@ import { ExternalLink, Github, Sun } from 'lucide-react';
 const Navbar = () => {
     return (
         <>
-            <div className="nav flex justify-between px-4 py-6 font-geist bg-zinc-950 text-white backdrop-blur-lg sticky top-0 z-50">
+            <div className="nav flex justify-between px-4 py-6 font-geist bg-zinc-950 text-white backdrop-blur-lg sticky top-0 z-50 border-b border-zinc-900">
 
                 <div className="left flex gap-4">
                     <p className='font-bold text-white'>Divyam's Portfolio</p>
@@ -40,6 +40,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
+
 
         </>
     )
